@@ -1,0 +1,130 @@
+<?php
+// Heading
+$_['heading_title']             = '<b><i class="c fa fa-bars"></i> Меню</b>';
+$_['page_title'] = 'Меню';
+
+// Tab
+$_['tab_second_item'] = 'Sub Items';
+$_['tab_third_item'] = 'Дочерние категории';
+
+// Текст
+$_['text_extension'] = 'Расширения';
+$_['text_success'] = 'Успешно: вы изменили модуль меню!';
+$_['text_edit'] = 'Редактировать модуль меню';
+$_['text_menu_bar_setting'] = 'Строка меню';
+$_['text_flyout_menu_setting'] = 'Всплывающее меню';
+$_['text_general_setting'] = 'General';
+$_['text_mega_menu_setting'] = 'Мега-меню';
+$_['text_top_item_setting'] = 'Top Items';
+$_['text_yes'] = 'Да';
+$_['text_no'] = 'Нет';
+$_['text_hover'] = 'Наведение';
+$_['text_click'] = 'Клик';
+$_['text_none'] = 'Нет';
+$_['text_fade'] = 'Fade';
+$_['text_slide'] = 'Slide';
+$_['text_from'] = 'От';
+$_['text_to'] = 'Кому';
+$_['text_top'] = 'Top';
+$_['text_right'] = 'Right';
+$_['text_bottom'] = 'Bottom';
+$_['text_left'] = 'Слева';
+$_['text_center'] = 'Центр';
+$_['text_static'] = 'Статический';
+$_['text_hover'] = 'Наведение';
+$_['text_color'] = 'Цвет';
+$_['text_size'] = 'Размер';
+$_['text_transform'] = 'Transform';
+$_['text_weight'] = 'Вес';
+$_['text_normal'] = 'Нормальный';
+$_['text_capitalize'] = 'capitalize';
+$_['text_uppercase'] = 'UPPERCASE';
+$_['text_lowercase'] = 'строчные буквы';
+$_['text_light'] = 'Light';
+$_['text_medium'] = 'Средний';
+$_['text_semibold'] = 'Полужирный';
+$_['text_bold'] = 'Bold';
+$_['text_menu_editor'] = 'Редактор меню';
+$_['text_list'] = 'Список';
+$_['text_add'] = 'Добавить меню';
+$_['text_edit_menu'] = 'Редактировать меню';
+$_['text_hor horizontal'] = 'Horizontal';
+$_['text_vertical'] = 'Вертикально';
+$_['text_mobile'] = 'Mobile';
+$_['text_add_top_item'] = 'Добавить элемент';
+$_['text_no_items'] = 'Нет пунктов меню!';
+$_['text_no_children_items'] = 'Нет дочерних элементов!';
+$_['text_mega_setting'] = 'Содержимое меню';
+$_['text_megamenu'] = 'Мега-меню';
+$_['text_flyoutmenu'] = 'Всплывающее меню';
+$_['text_category'] = 'Категория';
+$_['text_widget'] = 'Контейнер виджетов';
+$_['text_children'] = 'Дочерние элементы';
+$_['text_choose_category'] = 'Выбрать категорию';
+$_['text_column'] = 'столбец';
+$_['text_columns'] = 'колонки';
+$_['text_product'] = 'Product';
+$_['text_html'] = 'HTML-контент';
+$_['text_slider'] = 'Слайдер';
+$_['text_link'] = 'Ссылка';
+$_['text_add_sub_item'] = 'Добавить элемент';
+$_['text_disable_link'] = 'Скрыть ссылку';
+$_['text_hide_title'] = 'Скрыть заголовок';
+$_['text_title'] = 'Заголовок';
+$_['text_show_image'] = 'Показать изображение';
+$_['text_show_child'] = 'Показать дочерние элементы';
+$_['text_add_widget'] = 'Добавить виджет';
+$_['text_choose_product'] = 'Выбрать продукт';
+$_['text_choose_top_category'] = 'Лучшая категория';
+$_['text_success_item'] = 'Успех: вы изменили пункты меню!';
+$_['text_confirm_delete'] = 'Вы хотите удалить этот элемент?';
+$_['text_confirm_multiple_delete'] = 'Вы хотите удалить эти элементы?';
+$_['text_no_menus'] = 'Нет меню';
+$_['text_for_menu'] = 'Эта опция используется для вертикального меню';
+$_['text_choose_delete_items'] = 'Пожалуйста, выберите элементы!';
+$_['text_item_hierarchy'] = 'Иерархия пунктов меню';
+$_['text_custom_link'] = 'Пользовательская ссылка';
+
+// Entry
+$_['entry_name'] = 'Имя модуля';
+$_['entry_status'] = 'Статус';
+$_['entry_menu_height'] = 'Высота';
+$_['entry_event'] = 'Событие мыши';
+$_['entry_effect'] = 'Эффект';
+$_['entry_menu_background'] = 'Фон';
+$_['entry_menu_sub_item'] = 'Sub Items';
+$_['entry_menu_sub_item_hover'] = 'Навигация по подпунктам';
+$_['entry_menu_sub_sub_item'] = 'Подпункты';
+$_['entry_menu_sub_sub_item_hover'] = 'Подставка подпунктов';
+$_['entry_menu_padding'] = 'Padding';
+$_['entry_item_align'] = 'Выравнивания';
+$_['entry_item_background'] = 'Фон';
+$_['entry_item_font'] = 'Шрифт';
+$_['entry_menu_width'] = 'Ширина';
+$_['entry_menu_name'] = 'Имя';
+$_['entry_item_name'] = 'Имя';
+$_['entry_title'] = 'Заголовок';
+$_['entry_link'] = 'Ссылка';
+$_['entry_menu_type'] = 'Тип';
+$_['entry_order'] = 'Order';
+$_['entry_menu_content_type'] = 'Тип меню';
+$_['entry_content_type'] = 'Тип содержимого';
+$_['entry_top_category'] = 'Лучшая категория';
+$_['entry_choose_widget'] = 'Тип виджета';
+$_['entry_icon'] = 'Icon';
+$_['entry_choose_menu'] = 'Выбрать меню';
+$_['entry_number_cols'] = 'Количество столбцов';
+$_['entry_menu_text_color'] = 'Цвет текста';
+$_['entry_number_items'] = 'Показать элементы';
+
+// столбец
+$_['column_name'] = 'Имя';
+$_['column_status'] = 'Статус';
+$_['column_action'] = 'Действие';
+
+// Ошибка
+$_['error_warning'] = 'Предупреждение: пожалуйста, внимательно проверьте форму на наличие ошибок!';
+$_['error_permission'] = 'Предупреждение: у вас нет прав на изменение модуля!';
+$_['error_name'] = 'Имя модуля должно содержать от 3 до 64 символов!';
+$_['error_menu_name'] = 'Имя меню должно содержать от 3 до 64 символов!';
+$_['error_item_name'] = 'Имя элемента меню должно содержать от 3 до 64 символов!';

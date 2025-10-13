@@ -1,0 +1,52 @@
+<div class="testimonial-container">
+    <div class="swiper-viewport">
+        <div class="swiper-container testimonial-slides">
+            <div class="swiper-wrapper">
+
+                {% for testimonial in testimonials %}
+                    <div class="testimonial-content text-center swiper-slide">
+                      <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial-images">
+                            <img src="{{ testimonial.image }}" alt="{{ testimonial.customer_name }}">
+                        </div>
+                        <div class="testimonial-box media-body">
+                            <h5 class="testimonial-author">{{ testimonial.customer_name }}</h5>
+                            <p>{{ testimonial.content }}</p>
+                        </div>
+                    </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        {% if slide.pagination %}
+            <div class="swiper-pagination testimonial-pagination"></div>
+        {% endif %}
+
+        {% if slide.navigation %}
+            <div class="swiper-pager">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".testimonial-slides").swiper({
+        spaceBetween: 20,
+        {% if slide.pagination %}
+        pagination: '.testimonial-pagination',
+        paginationClickable: true,
+        {% endif %}
+        {% if slide.navigation %}
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        {% endif %}
+        speed: {% if slide.speed %} {{ slide.speed }} {% else %} 300 {% endif %},
+        slidesPerView: {{ slide.items }},
+        slidesPerColumn: {{ slide.rows }},
+        autoplay: {% if slide.auto %} 3000 {% else %} false {% endif %},
+        loop: false
+    });
+</script>

@@ -1,0 +1,26 @@
+<header class="scroll-fix">
+		<div class="box-inner">
+				{{ position3 }}
+				<div id="logo">
+				{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
+				  <h1><a href="{{ home }}">{{ name }}</a></h1>
+				  {% endif %}
+				</div>
+				<div class="col-hoz">{{ position2 }}</div>
+				<div class="col-cart">
+				{{ search }}
+				<div id="top-links" class="nav header-dropdown">
+				  <ul class="list-inline">
+					<li>
+						{% if logged %}
+            <a href="{{ account }}" class="btn-link"><span>{{ text_account }}</span></a>
+						{% else %}
+						<a href="{{ login }}" class="btn-link" title="{{ text_account }}"><span>{{ text_login }}</span></a>
+            {% endif %}
+					</li>
+				  </ul>
+				</div>
+				{% if header_cart %}{{ cart }}{% endif %}
+				</div>
+		</div>
+</header>

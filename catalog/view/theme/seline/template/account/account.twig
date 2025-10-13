@@ -1,0 +1,129 @@
+{{ header }}
+<div id="account-account" class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
+  {% endif %}
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}
+      <div class="row">
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-cog"></span></div>
+            <a href="{{ edit }}">{{ text_edit }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-lock"></span></div>
+            <a href="{{ password }}">{{ text_password }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-map"></span></div>
+            <a href="{{ address }}">{{ text_addres }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-heart"></span></div>
+            <a href="{{ wishlist }}">{{ text_wishlists }}</a>
+        </div>
+      </div>
+      {% if credit_cards %}
+        {% for credit_card in credit_cards %}
+        <div class="col-md-3">
+          <div class="user_m">
+            <div><span class="ion-card"></span></div>
+              <a href="{{ credit_card.href }}">{{ credit_card.name }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-store"></span></div>
+            <a href="{{ order }}">{{ text_order }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-download"></span></div>
+            <a href="{{ download }}">{{ text_download }}</a>
+        </div>
+      </div>
+      {% if reward %}
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-gift"></span></div>
+            <a href="{{ reward }}">{{ text_reward }}</a>
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-redo"></span></div>
+            <a href="{{ return }}">{{ text_return }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-select"></span></div>
+            <a href="{{ transaction }}">{{ text_transaction }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-briefcase"></span></div>
+            <a href="{{ recurring }}">{{ text_recurring }}</a>
+        </div>
+      </div>
+      {% if not tracking %}
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-users"></span></div>
+            <a href="{{ affiliate }}">{{ text_affiliate_add }}</a>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-file-empty"></span></div>
+            <a href="{{ affiliate }}">{{ text_affiliate_edit }}</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user_m">
+          <div><span class="lnr lnr-code"></span></div>
+            <a href="{{ tracking }}">{{ text_tracking }}</a>
+        </div>
+      </div>
+   {% endif %}
+   <div class="col-md-3">
+     <div class="user_m">
+       <div><span class="lnr lnr-envelope"></span></div>
+         <a href="{{ newsletter }}">{{ text_newsletter }}</a>
+     </div>
+   </div>
+   <div class="col-md-12 text-right">
+     <a id="dv-logout-link" class="btn btn-degault" href="{{ logout }}">{{ text_logout }}</a>
+   </div>
+
+      {{ content_bottom }}
+    </div>
+    </div>
+    </div>
+</div>
+{{ footer }}
