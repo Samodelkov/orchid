@@ -89,11 +89,6 @@
 								</div>
 							</div>
 							<div class="caption">
-								{% if product.manufacturer %}
-									<p class="manufacture-product">
-										<a href="{{ product.manufacturer_href }}">{{ product.manufacturer }}</a>
-									</p>
-								{% endif %}
 								{% if product.rating %}
 									<div class="rating">
 										{% for i in 1..5 %}
