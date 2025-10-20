@@ -194,7 +194,7 @@
 							{% endif %}
 						{% endif %}
 						<ul class="list-unstyled">
-							<li>{{ text_model }} <span>{{ model }}</span></li>
+							<li>Артикул:  <span>{{ model }}</span></li>
 							{% if reward %}
 								<li>{{ text_reward }} <span> {{ reward }}</span></li>
 							{% endif %}
@@ -202,6 +202,18 @@
 							{% if show_product_tax and tax %}
 								<li>{{ text_tax }} <span>{{ tax }}</span></li>
 							{% endif %}
+
+
+							{% if attribute_groups %}							
+								{% for attribute_group in attribute_groups %}								
+									{% for attribute in attribute_group.attribute %}
+										<li>{{ attribute.name }} <span>{{ attribute.text }}</span></li>
+										</tr>
+									{% endfor %}
+								{% endfor %}
+							{% endif %}
+
+
 							{% if points %}
 								<li>{{ text_points }} <span>{{ points }}</span></li>
 							{% endif %}
@@ -217,7 +229,7 @@
 
 						<div id="product"> {% if (show_product_button_cart or show_product_options) and options %}
 
-								<h3>{{ text_option }}</h3>
+								<!--<h3>{{ text_option }}</h3>-->
 								{% for option in options %}
 									{% if use_swatches %}
 										{% if option.type == 'select' %}
@@ -461,15 +473,15 @@
 			<div class="product-info-details-more">
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
-					{% if attribute_groups %}
+					<!--{% if attribute_groups %}
 						<li><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
-					{% endif %}
+					{% endif %}-->
 					{% if review_status %}
 						<li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
 					{% endif %}
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="tab-description">{{ description }}</div>
+					<!--<div class="tab-pane active" id="tab-description">{{ description }}</div>
 					{% if attribute_groups %}
 						<div class="tab-pane" id="tab-specification">
 							<table class="table table-striped">
@@ -489,7 +501,7 @@
 									</tbody>
 								{% endfor %}
 							</table>
-						</div>
+						</div>-->
 					{% endif %}
 					{% if review_status %}
 						<div class="tab-pane" id="tab-review">
