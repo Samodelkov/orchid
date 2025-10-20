@@ -645,7 +645,7 @@ body .quickview-container .alert{}
 .product-info-details .manufacture-product a:hover{color:#000;}
 .product-info-details .product-tags,.product-info-details .product-tags a{color:#242424;margin-bottom:3.5rem;}
 .product-info-details .product-tags a:hover{color:#999;}
-.product-info-details h1{font-size:2.4rem;font-weight:400;margin-top:0;color:#292929;letter-spacing:-.025em;margin-bottom:1.9rem;}
+.product-info-details h1{font-size:2.4rem;font-weight:400;margin-top:0;color:#292929;letter-spacing:0.02em;margin-bottom:1.9rem;}
 .product-info-details h1 a{color:#292929;}
 .product-info-details h1 a:hover{color:#999;}
 .product-info-details .rating{margin-bottom:2rem;}
