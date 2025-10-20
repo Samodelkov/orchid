@@ -28,6 +28,7 @@
 							<div class="lightbox-container"></div>
 							{% if use_swatches %}
 								<div class="product-zoom-image">
+								<button type="button"  class="btn-wishlist-new" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"></button>
 									{% if thumb %}
 										<a href="{{ popup }}" class="cloud-zoom main-image" id="product-cloud-zoom" style="width: {{ thumb_dimension.width }}px; height: {{ thumb_dimension.height }}px;"
 										   rel="{% if product_zoom_settings.title %} showTitle: true {% else %} showTitle: false {% endif %},
@@ -148,11 +149,11 @@
 						{% set class = 'col-sm-6' %}
 					{% endif %}
 					<div class="{{ class }} product-info-details">
-						{% if manufacturer %}
-							<p class="manufacture-product"><!--{{ text_manufacturer }}--> <a href="{{ manufacturers }}">{{ manufacturer }}</a></p>
-						{% endif %}
+						<!--{% if manufacturer %}
+							<p class="manufacture-product">{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></p>
+						{% endif %}-->
 						<h1>{{ heading_title }}</h1>
-						{% if review_status %}
+						<!--{% if review_status %}
 							<div class="rating">
 								{% for i in 1..5 %}
 									{% if rating < i %}
@@ -164,7 +165,7 @@
 								<a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); $('body,html').animate({scrollTop: $('ul.nav-tabs').offset().top}, 800); return false;">{{ reviews }}</a><a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); $('body,html').animate({scrollTop: $('ul.nav-tabs').offset().top}, 800); return false;">{{ text_write }}</a>
 
 							</div>
-						{% endif %}
+						{% endif %}-->
 						{% if show_product_price and price %}
 							<p class="price">
 								{% if not special %}

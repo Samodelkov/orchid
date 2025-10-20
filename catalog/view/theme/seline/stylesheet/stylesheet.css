@@ -730,3 +730,27 @@ footer{margin-top:4rem}.footer-links .inner{padding-top:5rem;padding-bottom:2rem
 .user_m:hover{border:2px solid #000;}
 .user_m span{font-size:3rem;color:#222;}
 .user_m span{}
+button.btn-wishlist-new {
+	font-family:'Linearicons-Free';
+	display:inline-block;
+	vertical-align:top;
+	line-height:inherit;
+	font-weight:700;
+	font-size:1.8rem;
+	margin-right:0.8rem;
+}
+button.btn-wishlist-new {
+	color: #242424;
+	background: none;
+	border-color: #242424;
+	border: none;
+	z-index: 10000;
+  	position: absolute;
+}
+button.btn-wishlist-new:before {
+	content:"\e813";
+}
+button.btn-wishlist-new:hover {
+	background: none;
+	color: red;
+}
