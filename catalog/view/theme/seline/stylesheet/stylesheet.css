@@ -754,3 +754,9 @@ button.btn-wishlist-new:hover {
 	background: none;
 	color: red;
 }
+#product {
+	width: 300px;
+}
+.list-unstyled {
+	font-size: 14px;
+}

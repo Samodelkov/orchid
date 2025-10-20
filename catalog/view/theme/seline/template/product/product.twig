@@ -28,7 +28,6 @@
 							<div class="lightbox-container"></div>
 							{% if use_swatches %}
 								<div class="product-zoom-image">
-								<button type="button"  class="btn-wishlist-new" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"></button>
 									{% if thumb %}
 										<a href="{{ popup }}" class="cloud-zoom main-image" id="product-cloud-zoom" style="width: {{ thumb_dimension.width }}px; height: {{ thumb_dimension.height }}px;"
 										   rel="{% if product_zoom_settings.title %} showTitle: true {% else %} showTitle: false {% endif %},
@@ -197,9 +196,9 @@
 						<ul class="list-unstyled">
 							<li>{{ text_model }} <span>{{ model }}</span></li>
 							{% if reward %}
-								<li>{{ text_reward }} <span>{{ reward }}</span></li>
+								<li>{{ text_reward }} <span> {{ reward }}</span></li>
 							{% endif %}
-							<li>{{ text_stock }} <span>{{ stock }}</span></li>
+							<li>{{ text_stock }} <span style="color: #038403;"> {{ stock }}</span></li>
 							{% if show_product_tax and tax %}
 								<li>{{ text_tax }} <span>{{ tax }}</span></li>
 							{% endif %}
@@ -445,13 +444,13 @@
 								{% endif %}
 							{% endif %}
 						</div>
-						{% if show_product_tags and tags %}
+						<!--{% if show_product_tags and tags %}
 							<p class="product-tags">{{ text_tags }}
 								{% for i in 0..tags|length %}
 									{% if i < (tags|length - 1) %} <a href="{{ tags[i].href }}">{{ tags[i].tag }}</a>,
 									{% else %} <a href="{{ tags[i].href }}">{{ tags[i].tag }}</a> {% endif %}
 								{% endfor %} </p>
-						{% endif %}
+						{% endif %}-->
 						{% if show_product_social %}
 
 
