@@ -760,3 +760,6 @@ button.btn-wishlist-new:hover {
 .list-unstyled {
 	font-size: 14px;
 }
+.price-new {
+	color: red;
+}

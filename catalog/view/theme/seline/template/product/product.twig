@@ -152,8 +152,8 @@
 							<p class="manufacture-product">{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></p>
 						{% endif %}-->
 						<h1>{{ heading_title }}</h1>
-						<!--{% if review_status %}
-							<div class="rating">
+						{% if review_status %}
+							<!--<div class="rating">
 								{% for i in 1..5 %}
 									{% if rating < i %}
 									<span class="icon-ratings"><i class="icon-rating icon-rating-o"></i></span>
@@ -163,8 +163,8 @@
 								{% endfor %}
 								<a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); $('body,html').animate({scrollTop: $('ul.nav-tabs').offset().top}, 800); return false;">{{ reviews }}</a><a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); $('body,html').animate({scrollTop: $('ul.nav-tabs').offset().top}, 800); return false;">{{ text_write }}</a>
 
-							</div>
-						{% endif %}-->
+							</div>-->
+						{% endif %}
 						{% if show_product_price and price %}
 							<p class="price">
 								{% if not special %}
@@ -194,26 +194,21 @@
 							{% endif %}
 						{% endif %}
 						<ul class="list-unstyled">
-							<li>Артикул:  <span>{{ model }}</span></li>
+							<li>Артикул: <span>{{ model }}</span></li>
 							{% if reward %}
-								<li>{{ text_reward }} <span> {{ reward }}</span></li>
+								<li>{{ text_reward }} <span>{{ reward }}</span></li>
 							{% endif %}
 							<li>{{ text_stock }} <span style="color: #038403;"> {{ stock }}</span></li>
 							{% if show_product_tax and tax %}
 								<li>{{ text_tax }} <span>{{ tax }}</span></li>
 							{% endif %}
-
-
-							{% if attribute_groups %}							
-								{% for attribute_group in attribute_groups %}								
+							{% if attribute_groups %}			
+								{% for attribute_group in attribute_groups %}							
 									{% for attribute in attribute_group.attribute %}
 										<li>{{ attribute.name }} <span>{{ attribute.text }}</span></li>
-										</tr>
 									{% endfor %}
 								{% endfor %}
 							{% endif %}
-
-
 							{% if points %}
 								<li>{{ text_points }} <span>{{ points }}</span></li>
 							{% endif %}
@@ -229,7 +224,7 @@
 
 						<div id="product"> {% if (show_product_button_cart or show_product_options) and options %}
 
-								<!--<h3>{{ text_option }}</h3>-->
+								<h3>{{ text_option }}</h3>
 								{% for option in options %}
 									{% if use_swatches %}
 										{% if option.type == 'select' %}
@@ -456,13 +451,13 @@
 								{% endif %}
 							{% endif %}
 						</div>
-						<!--{% if show_product_tags and tags %}
+						{% if show_product_tags and tags %}
 							<p class="product-tags">{{ text_tags }}
 								{% for i in 0..tags|length %}
 									{% if i < (tags|length - 1) %} <a href="{{ tags[i].href }}">{{ tags[i].tag }}</a>,
 									{% else %} <a href="{{ tags[i].href }}">{{ tags[i].tag }}</a> {% endif %}
 								{% endfor %} </p>
-						{% endif %}-->
+						{% endif %}
 						{% if show_product_social %}
 
 
@@ -481,9 +476,9 @@
 					{% endif %}
 				</ul>
 				<div class="tab-content">
-					<!--<div class="tab-pane active" id="tab-description">{{ description }}</div>
+					<div class="tab-pane active" id="tab-description">{{ description }}</div>
 					{% if attribute_groups %}
-						<div class="tab-pane" id="tab-specification">
+						<!--<div class="tab-pane" id="tab-specification">
 							<table class="table table-striped">
 								{% for attribute_group in attribute_groups %}
 									<thead>
@@ -577,6 +572,11 @@
 												</div>
 											</div>
 											<div class="caption">
+												{% if product.manufacturer %}
+													<p class="manufacture-product">
+														<a href="{{ product.manufacturer_href }}">{{ product.manufacturer }}</a>
+													</p>
+												{% endif %}
 												{% if product.rating %}
 													<div class="rating"> {% for j in 1..5 %}
 														{% if product.rating < j %}
