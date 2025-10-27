@@ -280,7 +280,8 @@ to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-t
 	min-width:4.1rem;
 	}
 .pro-label:not(:first-child){
-	
+	top: 4rem;
+	left: 1rem;
 	}
 .swiper-viewport .swiper-slide {
 	width: 90% !important;
