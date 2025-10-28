@@ -14,6 +14,8 @@ class Document {
 	private $title;
 	private $description;
 	private $keywords;
+	private $ogimage;	
+	private $ogurl;
 
 	private $links = array();
 	private $styles = array();
@@ -64,6 +66,18 @@ class Document {
      */
 	public function setKeywords($keywords) {
 		$this->keywords = $keywords;
+	}
+	public function setOgimage($ogimage) {
+	$this->ogimage = $ogimage;
+	}
+	public function getOgimage() {
+	return $this->ogimage;
+	}
+	public function setOgurl($ogurl) {
+	$this->ogurl = $ogurl;
+	}
+	public function getOgurl() {
+	return $this->ogurl;
 	}
 
 	/**
