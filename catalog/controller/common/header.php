@@ -24,6 +24,7 @@ class ControllerCommonHeader extends Controller {
 			$this->document->addLink($server . 'image/' . $this->config->get('config_icon'), 'icon');
 		}
 
+		$data['ver'] = rand(1, 10000);
 		$data['title'] = $this->document->getTitle();
 
 		$data['base'] = $server;
