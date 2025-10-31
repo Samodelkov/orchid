@@ -44,8 +44,8 @@ div.required .control-label:before{content:'* ';color:#F00;font-weight:700;}
 #back-top i{vertical-align:top;line-height:inherit;}
 #common-maintenance{margin-top:10rem;}
 .featured-categories-content,.sellers{margin-left:-15px;margin-right:-15px;}
-.products-b{border:1px solid #ededed;border-radius:8px;margin-top:3rem;padding-bottom:3rem;}
-.layout-full,.layout-full > .container,.layout-full .row,.layout-full .main-col,.layout-full .sub-col{width:100%;margin:0;padding:0 5px;}
+.products-b{margin-top:3rem;padding-bottom:3rem;}
+.layout-full,.layout-full > .container,.layout-full .row,.layout-full .main-col,.layout-full .sub-col{width:100%;margin:0;}
 .layout-box-module{background:#fafafa;padding:5rem 0;margin-top:5rem;}
 .layout-box-module .main-col:first-child .sub-row{position:relative;margin:0;background:#fff;padding:3rem 0.5rem;}
 .layout-box-module .main-col:first-child .sub-row:nth-child(2){padding-top:0;}
